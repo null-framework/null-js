@@ -1,0 +1,38 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Card */
+
+.null-card-container .null-card-image-container img {
+border-top-left-radius: var(--null-border-radius);
+border-top-right-radius: var(--null-border-radius);
+}
+
+.null-card-container .null-card-floating-box-container {
+position: absolute;
+top: -15px;
+right: 10px;
+left: auto;
+min-width: 100px;
+}
+
+.null-card-image-overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+border-top-left-radius: var(--null-border-radius);
+border-top-right-radius: var(--null-border-radius);
+background: linear-gradient(0deg,rgba(0,0,0,.95) 0,transparent 100%);
+}
+
+.null-rtl .null-card-container .null-card-floating-box-container {
+left: 10px;
+right: auto;
+}
+
+/* End Card */

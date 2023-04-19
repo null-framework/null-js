@@ -1,0 +1,61 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Quote */
+
+.null-quote {
+-webkit-box-shadow: -3px 0px 0px var(--null-color-main), rgb(0 0 0 / 10%) 0 0 40px;
+box-shadow: -3px 0px 0px var(--null-color-main), rgb(0 0 0 / 10%) 0 0 40px;
+border-left: 1px solid var(--null-color-main);
+margin: 0;
+}
+
+.null-quote:before {
+content: "\201C";
+font-size: 4em;
+position: absolute;
+right: 0;
+z-index: 0;
+opacity: 0.3;
+top: -15px;
+bottom: 0;
+}
+
+.null-quote-author-container {
+-webkit-padding-start: 40px;
+padding-inline-start:  40px;
+}
+
+.null-quote-author-container::before {
+position: absolute;
+top: 1px;
+width: 30px;
+height: 1px;
+background: var(--null-color-grey);
+content: '';
+bottom: 0;
+margin: 10px 0 13px -40px;
+}
+
+/* RTL */
+.null-rtl .null-quote {
+-webkit-box-shadow: 3px 0px 0px var(--null-color-main), rgb(0 0 0 / 10%) 0 0 40px;
+box-shadow: 3px 0px 0px var(--null-color-main), rgb(0 0 0 / 10%) 0 0 40px;        
+border-right: 1px solid var(--null-color-main);
+border-left: 0;
+}
+
+.null-rtl .null-quote:before {
+left: 0;
+right: auto;
+}
+
+.null-rtl .null-quote-author-container::before {
+margin: 10px -40px 13px 0; 
+}
+/* RTL */
+
+/* End Quote */

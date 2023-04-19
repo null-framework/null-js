@@ -1,0 +1,129 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Toast */
+
+.null-toast {
+position: fixed;
+z-index: 99;
+padding: 20px;
+-webkit-transform: translateX(100%);
+-ms-transform: translateX(100%);
+transform: translateX(100%);
+overflow: hidden;
+}
+
+.null-toast:not(:focus) {
+-webkit-transition: -webkit-transform 0.5s ease;
+transition: -webkit-transform 0.5s ease;
+-o-transition: transform 0.5s ease;
+transition: transform 0.5s ease;
+transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.null-toast-top {
+top: 0;
+}
+
+.null-toast-bottom {
+bottom: 0;
+}
+
+.null-toast-left {
+left: 0;
+right: auto;
+transform: translateX(-100%);
+}
+
+.null-toast-right {
+right: 0;
+left: auto;
+}
+
+.null-toast.active {
+transform: translateX(0%);
+}
+
+.null-toast-close {
+position: absolute;
+top: 10px;
+right: 15px;
+left: auto;
+padding: 5px;
+opacity: 0.7;
+width: 20px;
+height: 20px;
+background: #ff9191;
+text-align: center;
+border-radius: 50%;
+}
+
+.null-toast-close:hover {
+opacity: 1;
+}
+
+.null-toast-progress {
+position: absolute;
+bottom: 0;
+left: 0;
+height: 4px;
+width: 100%;
+background: #ddd;
+}
+
+.null-toast-progress:before {
+content: '';
+position: absolute;
+bottom: 0;
+right: 0;
+height: 100%;
+width: 100%;
+background-color: var(--null-color-main);
+}
+
+.null-toast-progress.active:before {
+animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    100%{
+    right: 100%;
+    }
+}
+
+.null-toast.active ~ .null-toast-button {
+pointer-events: none;
+}
+
+/* RTL */
+
+.null-rtl .null-toast {
+transform: translateX(-100%);
+}
+
+.null-rtl .null-toast.active {
+transform: translateX(0%) !important;
+}
+
+.null-rtl .null-toast-right {
+right: auto;
+left: 0;
+}
+
+.null-rtl .null-toast-left {
+transform: translateX(100%);
+right: 0;
+left: auto;
+}
+
+.null-rtl  .null-toast-close {
+right: auto;
+left: 15px;
+}
+
+/* RTL */
+
+/* End Toast */

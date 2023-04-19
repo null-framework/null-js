@@ -1,0 +1,84 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Alert */
+
+.null-alert-container {
+padding: 12px 20px;
+opacity: 1;
+-webkit-transition: opacity 1000ms linear;
+-o-transition: opacity 1000ms linear;
+transition: opacity 1000ms linear;
+}
+
+.null-alert-exit-icon {
+position:absolute;
+right: 20px;
+overflow: hidden;
+}
+
+/* null-alert-warning */
+
+.null-alert-warning {
+background: #fffcd1;
+border-left: 5px solid #e3e44b;
+}
+
+/* null-alert-warning */
+
+/* null-alert-success */
+.null-alert-success {
+background: #CDF2CA;
+border-left: 5px solid #2cc622;
+}
+/* null-alert-success */
+
+/* null-alert-danger */
+.null-alert-danger {
+background: #f9a2a2;
+border-left: 5px solid #be0f0f;
+}
+/* null-alert-danger */
+
+/* null-alert-primary */
+.null-alert-primary {
+background: var(--null-color-main);
+border-left: 5px solid var(--null-color-black);
+}
+/* null-alert-primary */
+
+/* RTL */
+.null-rtl .null-alert-warning {
+background: #fffcd1;
+border-right: 5px solid #e3e44b;
+border-left: 0;
+}
+
+.null-rtl .null-alert-success {
+background: #CDF2CA;
+border-right: 5px solid #2cc622;
+border-left: 0;
+}
+
+.null-rtl .null-alert-danger {
+background: #f9a2a2;
+border-right: 5px solid #be0f0f;
+border-left: 0;
+}
+
+.null-rtl .null-alert-primary {
+background: var(--null-color-main);
+border-right: 5px solid var(--null-color-black);
+border-left: 0;
+}
+
+.null-rtl .null-alert-exit-icon {
+left: 20px;
+right: auto;
+}
+/* RTL */
+
+/* End Alert */

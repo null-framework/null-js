@@ -1,0 +1,27 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Accordion */
+
+.null-accordion {
+width: 100%;
+}
+
+.null-accordion-content-container {
+height: 0;
+overflow: hidden;
+-webkit-transition: all .35s ease;
+-o-transition: all .35s ease;
+transition: all .35s ease;
+}
+
+.null-accordion-content-container p {
+padding: 0 20px 20px 20px;
+line-height: 1.5;
+margin: 0;
+}
+
+/* End Accordion */

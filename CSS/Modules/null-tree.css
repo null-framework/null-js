@@ -1,0 +1,85 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Tree */
+
+.null-tree-container ul {
+display: block;
+-webkit-margin-start: 0px;
+margin-inline-start: 0px;
+-webkit-margin-end: 0px;
+margin-inline-end: 0px;
+-webkit-padding-start: 40px;
+padding-inline-start: 40px; 
+}
+
+.null-tree-container ul li {
+position: relative;
+margin: 10px 0 10px 10px;
+}
+
+.null-tree-container ul li:before {
+content: "";
+counter-increment: item;
+position: absolute;
+top: -7px;
+left: -30px;
+border-left: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+width: 30px;
+height: 15px;
+}
+
+.null-tree-container li:after {
+position: absolute;
+content: "";
+top: 8px;
+left: -30px;
+border-left: 1px solid #ddd;
+border-top: 1px solid #ddd;
+width: 30px;
+height: 100%;
+}
+
+.null-tree-list ul {
+display: none;
+}
+
+.null-tree-list ul.active {
+display: block;
+}
+
+.null-tree-list .active li {
+font-size: 14px;
+}
+
+.null-tree-list .active li:last-child {
+margin-bottom: 15px;
+}
+
+.null-tree-list .active li .null-tree-list-title {
+font-size: 14px;
+}
+
+/*RTL*/
+
+.null-rtl .null-tree-container ul li:before {
+left: auto;
+right: -30px;
+border-left: none;
+border-right: 1px solid #ddd;
+}
+
+.null-rtl .null-tree-container li:after {
+left: auto;
+right: -30px;
+border-left: none;
+border-right: 1px solid #ddd;
+}
+
+/*RTL*/
+
+/* End Tree */

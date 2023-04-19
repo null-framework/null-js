@@ -1,0 +1,35 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Search Bar */
+
+.null-search-bar form .null-search-bar-input {
+width: 100% !important;
+border: 0;
+padding: 0 10px;
+-webkit-appearance: none;
+caret-color: var(--null-color-main);
+height: 50px;
+}
+
+.null-search-bar form .null-search-bar-input:focus {
+outline: 0;
+}
+
+.null-search-bar form button {
+position: absolute;
+right: 10px;
+left: auto;
+}
+
+/* RTL */
+.null-rtl .null-search-bar form button {
+left: 10px;
+right: auto;
+}
+/* RTL */
+
+/* End Search Bar */

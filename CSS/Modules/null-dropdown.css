@@ -1,0 +1,76 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Dropdown */
+
+.null-dropdown-button {
+border-radius: var(--null-border-radius);
+border: 3px solid var(--null-color-light-grey);
+min-width: 200px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-ms-flex-pack: distribute;
+justify-content: space-around;
+background: transparent;
+}
+
+.null-dropdown-button:focus {
+outline: 0;
+background: var(--null-background-light-grey);
+}
+
+.null-dropdown-button svg.active {
+transform: rotate(180deg);
+}
+
+.null-dropdown-button.active {
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+-webkit-transition: none;
+-o-transition: none;
+transition: none;
+}
+
+.null-dropdown-button * {
+pointer-events: none;
+}  
+
+.null-dropdown {
+height: 0;
+opacity: 0;
+position: absolute;
+width: 100%;
+overflow: hidden;
+-webkit-transition: opacity .5s;
+-o-transition: opacity .5s;
+transition: opacity .5s;
+}
+
+.null-dropdown-menu {
+background: var(--null-color-light-grey);
+}
+
+.null-dropdown-menu li {
+border-bottom: 1px solid gainsboro;
+}
+
+.null-dropdown-menu li:hover {
+opacity: 0.7;
+}
+
+.null-dropdown-menu li.active {
+opacity: 0.7;
+}
+
+.null-dropdown-menu li:last-child {
+border-bottom: 0;
+}
+
+/* End Dropdown */

@@ -1,0 +1,39 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Circular Progress */
+
+:root{
+--null-circular-progress-size:200px;
+}
+
+.null-circular-progress-container{
+width: 400px;
+max-width: 100%;
+}
+
+.null-circular-progress{
+height: var(--null-circular-progress-size);
+width: var(--null-circular-progress-size);
+border-radius: 50%;
+background: conic-gradient(var(--null-color-main) 0deg, #f6f7f9 0deg);
+}
+
+.null-circular-progress::before{
+content: "";
+position:absolute;
+height:calc(var(--null-circular-progress-size) - 40px );
+width:calc(var(--null-circular-progress-size) - 40px );
+border-radius:50%;
+background-color:var(--null-color-white);
+}
+
+.null-circular-progress-value{
+font-size: 40px;
+color:var(--null-color-main);
+}
+
+/* End Circular Progress */

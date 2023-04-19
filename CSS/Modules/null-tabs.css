@@ -1,0 +1,58 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Tabs */
+
+[data-tab-content] {
+opacity: 0;
+height: 0;
+overflow: hidden;
+-webkit-transition: opacity .20s ease-in-out;
+-o-transition: opacity .20s ease-in-out;
+transition: opacity .20s ease-in-out;
+}
+
+.active[data-tab-content] {
+opacity: 1;
+height: auto;
+}
+
+.null-tabs-links {
+padding: 10px 20px;
+border-top-right-radius: var(--null-border-radius);
+border-top-left-radius: var(--null-border-radius);
+}
+
+.null-tab {
+padding: 10px;
+min-width: 100px;
+margin: 5px;
+-webkit-transition: all .1s linear;
+-o-transition: all .1s linear;
+transition: all .1s linear;
+border-bottom: 1px solid var(--null-color-main);
+}
+
+.null-tab:hover {
+border-radius: var(--null-border-radius);
+background: var(--null-color-main);
+color: var(--null-color-white);
+border-bottom:0;
+}
+
+.null-tab.active {
+background: var(--null-color-main);
+border-radius: var(--null-border-radius);
+margin: 5px;
+color: var(--null-color-white);
+}
+
+.null-tabs {
+padding: 0 20px;
+margin: 0 5px;
+}
+
+/* End Tabs */

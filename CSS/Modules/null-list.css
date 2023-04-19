@@ -1,0 +1,76 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start List */
+
+#null-list-search-input {
+width: 100%;
+margin-bottom: 15px;
+border: 0;
+background: var(--null-color-light-grey);
+color: var(--null-color-black);
+border-radius: var(--null-border-radius);
+height: 45px;
+caret-color: var(--null-color-main);
+font-size: 16px;
+padding:10px
+}
+
+#null-list-search-input:focus {
+border: 0;
+outline: 0;
+}
+
+#null-list-total-results {
+margin-bottom: 15px;
+}
+
+.null-list-results {
+border: 3px solid var(--null-color-light-grey);
+border-radius: var(--null-border-radius);
+}
+
+.null-list-results-overflow {
+height: 150px;
+overflow: hidden;
+overflow-y: auto;
+}
+
+.null-list-results-overflow::-webkit-scrollbar {
+width: 7px;
+}
+
+.null-list-results-overflow::-webkit-scrollbar-thumb {
+background: #878787;
+border-radius: 25px;
+}
+
+.null-list-results-overflow::-webkit-scrollbar-track {
+background: #e3e3e3;
+border-radius: 25px;
+}
+
+.null-list-result , .null-list-result-main {
+border: 1px solid var(--null-color-light-grey);
+}
+
+.null-list-result-no-records-found div {
+padding:10px;
+}
+
+.null-list-result:last-child {
+border-bottom: none;
+}
+
+.null-list-result span , .null-list-result-main span {
+padding:10px;
+}
+
+.null-list-result:hover {
+background-color: #dce0e7;
+}
+
+/* End List */

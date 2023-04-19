@@ -1,0 +1,29 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Breadcrumb */
+
+.null-breadcrumb-solidus .null-breadcrumb-item:not(:last-of-type)::after {
+content:'/';
+margin:0 10px;
+}
+
+.null-breadcrumb-arrow .null-breadcrumb-item:not(:last-of-type)::after {
+content:'\203a';
+margin:0 10px;
+}
+
+.null-breadcrumb-item-link:hover {
+color: var(--null-color-main);
+opacity: 0.7;
+}
+
+.null-breadcrumb-item-link.active {
+color: var(--null-color-main);
+font-weight: bold;
+}
+
+/* End Breadcrumb */

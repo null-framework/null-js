@@ -1,0 +1,47 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Progress Bar */
+
+.null-progress-bar-container{
+height: 20px;
+background-color: var(--null-color-light-grey);
+}
+
+.null-progress-bar{
+color: var(--null-color-white);
+background-color: var(--null-color-main);
+transition: width .5s ease;
+border-radius: var(--null-border-radius);
+}
+
+.null-progress-bar-message{
+position: absolute;
+top: -30px;
+background: #ededed;
+color: var(--null-color-black);
+inset-inline-end: 0;
+padding: 4px;
+border-radius: var(--null-border-radius);
+}
+
+.null-progress-bar-message::after{
+content:"";
+border-color:transparent;
+border-width:5px;
+border-style:solid;
+position:absolute;
+bottom:-10px;
+inset-inline-start: 50%;
+transform:translateX(-50%);
+border-top-color: #ededed;
+}
+
+.null-progress-bar-small{
+height: 8px;
+}
+
+/* End Progress Bar */

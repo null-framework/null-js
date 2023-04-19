@@ -1,0 +1,77 @@
+/*
+* Null JS v1.0.0 (https://null-js.com)
+* Copyright (c) 2023 Null JS
+* Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Order List */
+
+.null-order-list {
+margin: 0;
+padding: 0;
+line-height: normal;
+}
+
+.null-order-list li {
+line-height: 25px;
+margin: 0 0 25px;
+counter-increment: step-counter;
+list-style: none;
+position: relative;
+padding: 0 0 0 45px;
+}
+
+.null-order-list-rounded li::before {
+border-radius: var(--null-border-radius);
+}
+
+.null-order-list-circle li::before {
+border-radius: 50%;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+}
+
+.null-order-list-hexagon  li::before {
+clip-path: polygon(50% 0%, 85% 25%, 85% 75%, 50% 100%, 15% 75%, 15% 25%);
+transform: rotate(0deg);
+}
+
+.null-order-list li::before {
+content: counter(step-counter);
+margin-right: 5px;
+background-color: var(--null-color-main);
+color: var(--null-color-white);
+font-weight: bold;
+padding: 3px 8px;
+position: absolute;
+left: 0;
+top: -3px;
+width: 30px;
+height: 30px;
+text-align: center;
+font-weight: normal;
+line-height: 28px;
+}
+
+@media screen and (max-width: 767px) {
+    .null-order-list {
+    margin: 25px 0 30px;
+    }
+    .null-order-list li {
+    line-height: 22px;
+    margin: 0 0 15px;
+    padding: 0 0 0 32px;
+    }
+
+    .null-order-list li::before {
+    padding: 3px 2px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    line-height: 17px;
+    font-size: 13px
+    }
+}
+
+/* End Order List */

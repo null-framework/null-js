@@ -1,0 +1,70 @@
+/*
+* Null JS v1.0.0 (https://null-js.com)
+* Copyright (c) 2023 Null JS
+* Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Timeline */
+
+.null-timeline-items {
+max-width: 1000px;
+margin:auto;
+}
+
+.null-timeline-items::before {
+content: '';
+position: absolute;
+width: 2px;
+height: 100%;
+background-color: var(--null-color-grey);
+left: calc(50% - 1px);
+}
+
+.null-timeline-item:last-child {
+margin-bottom: 0;
+}
+
+.null-timeline-item:nth-child(odd) {
+padding-right: calc(50% + 30px);
+text-align: right;	
+}
+
+.null-timeline-item:nth-child(even) {
+padding-left: calc(50% + 30px);
+text-align: left;
+}
+
+.null-timeline-dot {
+height: 16px;
+width: 16px;
+background-color: var(--null-color-main);
+position: absolute;
+left: calc(50% - 8px);
+border-radius: 50%;	
+}
+
+.null-timeline-date {
+color: var(--null-color-main);
+margin:0 5px 15px;
+}
+
+@media(max-width: 767px) {
+    .null-timeline-items::before {
+    left: 7px;
+    }
+
+    .null-timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+    }
+
+    .null-timeline-item:nth-child(odd),
+    .null-timeline-item:nth-child(even) {
+    padding-left: 37px;
+    }
+    .null-timeline-dot {
+    left:0;
+    }
+}   
+
+/* End Timeline */

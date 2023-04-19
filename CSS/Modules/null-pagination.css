@@ -1,0 +1,45 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Pagination */
+
+.null-pagination a:hover {
+color:var(--null-color-black);
+}
+
+.null-pagination-item-link {
+padding: 8px 12px;
+border: 1px solid #1d18180d;
+color: #333;
+text-decoration: none;
+transition: none;
+}
+
+.null-pagination-item-link:not(:focus) {
+transition: all 0.3s ease;
+}
+
+.null-pagination-item-link:hover,
+.null-pagination-item-link:focus {
+background-color: #e0dfdf;
+}
+
+.null-pagination-item-link.active {
+background-color: #8c8b8b96;
+}
+
+.null-pagination-item-link.disabled {
+pointer-events: none;
+color: #b8b8b8;
+user-select: none;
+}
+
+.null-pagination-rounded .null-pagination-item .null-pagination-item-link {
+border-radius: var(--null-border-radius);
+margin:0 5px;
+}
+
+/* End Pagination */

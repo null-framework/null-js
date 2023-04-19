@@ -1,0 +1,82 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Modal */
+
+.null-modal-container {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+overflow: auto;
+background: #d6d6d669;
+}
+
+.null-modal-container.active {
+display: block;
+}
+
+.null-modal-header-container button[data-close-button] {
+border: none;
+outline: none;
+background: #ff9191;
+border-radius: var(--null-border-radius);
+-webkit-appearance: none;
+}
+
+.null-modal-body-overflow-hidden {
+overflow: hidden;
+}
+
+.null-modal {
+margin: auto;
+max-height: calc(100% - 40px); /* subtract header and footer heights */
+overflow-y: auto;
+}
+
+.null-modal-medium {
+width: 800px;
+}
+
+.null-modal-small {
+width: 500px;
+}
+
+@media screen and (max-width: 992px) { 
+    .null-modal-medium{
+    width: 100%;
+    }
+    
+    .null-modal-small{
+    width: 100%;
+    }
+}
+
+.null-modal-center{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.null-modal-center::-webkit-scrollbar {
+width: 7px;
+}
+
+.null-modal-center::-webkit-scrollbar-thumb {
+background: #878787;
+border-radius: 25px;
+}
+
+.null-modal-center::-webkit-scrollbar-track {
+background: #e3e3e3;
+border-radius: 25px;
+}
+
+/* End Modal */
