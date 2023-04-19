@@ -344,6 +344,7 @@ function null_list(listID) {
         );
     }
 
+    let nullCountRecords = 0;
     // Add data attributes to each search result element
     const null_list_total_results = document.querySelector(
         `${listID} #null-list-total-results span`
