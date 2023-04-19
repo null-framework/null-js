@@ -1464,7 +1464,6 @@ left: 15px;
 /* Start Tree */
 
 .null-tree-container ul {
-display: block;
 -webkit-margin-start: 0px;
 margin-inline-start: 0px;
 -webkit-margin-end: 0px;
