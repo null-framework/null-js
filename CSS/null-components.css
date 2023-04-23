@@ -1539,3 +1539,82 @@ border-right: 1px solid #ddd;
 /*RTL*/
 
 /* End Tree */
+
+/* Start Flash List */
+
+.null-flash-list-container::before {
+content: '';
+position: absolute;
+width: 2px;
+height: 100%;
+background-color: var(--null-color-main);
+margin: 0 9px;
+}
+
+.null-flash-list-container::after {
+content: '';
+position: absolute;
+inset-inline-start: 6px;
+width: 8px;
+height: 8px;
+background-color: var(--null-color-main);
+opacity: 0.6;
+border-radius: 50%;
+}
+
+.null-flash-list-container li::before {
+content: '';
+width: 20px;
+height: 20px;
+display: block;
+border-radius: 50%;
+border: 2px solid var(--null-color-white);
+outline: 2px solid var(--null-color-main);
+z-index: 2;
+-webkit-margin-end: 15px;
+margin-inline-end: 15px;
+position: relative;
+padding: 8px;
+}
+
+.null-flash-list:not(:last-child) {
+margin-bottom: 20px;
+}
+
+.null-flash-list-container li.null-flash-list-done::before {
+background: var(--null-color-main);
+}
+
+.null-flash-list-container li.null-flash-list-current::before {
+animation: null-flash 0.8s infinite alternate;
+}
+
+.null-flash-list-container .null-font-weight-bold {
+  margin-bottom: 5px;
+}
+
+@-webkit-keyframes null-flash {
+
+from {
+  background-color: var(--null-color-main);
+}
+
+to {
+  background-color: var(--null-color-white);
+}
+
+}
+
+@keyframes null-flash {
+
+from {
+  background-color: var(--null-color-main);
+}
+
+to {
+  background-color: var(--null-color-white);
+}
+
+}
+
+/* End Flash List */
