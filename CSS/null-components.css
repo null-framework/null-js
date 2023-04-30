@@ -1618,3 +1618,42 @@ to {
 }
 
 /* End Flash List */
+
+/* Start Scroll To Top */
+
+.null-scroll-to-top-container {
+height: 40px;
+width: 40px;
+border-radius: 50%;
+position: fixed;
+bottom: 30px;
+right: 0;
+-webkit-transform: translateX(60px);
+-ms-transform: translateX(60px);
+transform: translateX(60px);
+z-index: 9999;
+border: 0;
+background-color: conic-gradient(var(--null-color-main) 0deg, var(--null-color-light-grey) 0deg);
+-webkit-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease;
+}  
+
+.null-scroll-to-top-container::before {
+content: "";
+position: absolute;
+height: 30px;
+width: 30px;
+border-radius: 50%;
+background-color: var(--null-color-light-grey);
+z-index: -1;
+overflow: hidden;
+}
+
+.null-scroll-to-top-container.active {
+-webkit-transform: translateX(-10px) rotate(360deg);
+-ms-transform: translateX(-10px) rotate(360deg);
+transform: translateX(-10px) rotate(360deg);
+}
+
+/* End Scroll To Top */
