@@ -1582,3 +1582,22 @@ border-left: 0;
 }
 
 /* End Form */
+
+/* Start Scroll */
+
+.null-scroll::-webkit-scrollbar {
+width:7px;
+height: 7px;
+}
+
+.null-scroll::-webkit-scrollbar-track {
+background:#ece9e9;
+-webkit-border-radius:25px;
+}
+
+.null-scroll::-webkit-scrollbar-thumb {
+background:#ccc;
+-webkit-border-radius:25px;
+}
+
+/* End Scroll */
