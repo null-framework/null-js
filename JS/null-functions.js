@@ -4,7 +4,7 @@
 * Licensed under MIT (https://opensource.org/licenses/MIT)
 */
 
-/*JS function */
+/*JS functions */
 
 /**
  * @name null_translator
@@ -685,4 +685,64 @@ console.log(nullNewArray); // [2, 4, 6]
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*JS function */
+/**
+ * @name null_process
+ * @description Process element(s) by executing a callback function on each matched element.
+ * @param {string} el - The selector to match elements (ID or class).
+ * @param {Function} callBack - The callback function to be executed on each matched element.
+ * @returns {Array} An array containing the matched elements.
+ * @throws {Error} If the element with the specified ID is not found or if an invalid selector is provided.
+ */
+
+function null_process(el, callBack) {
+
+    // Check if the selector starts with '#'
+
+    if (el.startsWith("#")) {
+
+        // If it does, find the element by ID
+        const element = document.querySelector(el);
+
+        if (element) {
+
+            // If the element is found, execute the callback function
+            callBack(element);
+
+            // Return an array containing the element
+            return [element];
+
+        } else {
+
+            // Throw an error if the element with the provided ID is not found
+            throw new Error(`Element with ID "${el}" not found.`);
+        }
+    }
+    // Check if the selector starts with '.'
+    else if (el.startsWith(".")) {
+
+        // If it does, remove the leading dot to get the class name
+        const className = el.substring(1);
+
+        // Find all elements with the specified class name
+        const elements = Array.from(document.getElementsByClassName(className));
+
+        elements.forEach(element => {
+            // Execute the callback function for each element
+            callBack(element);
+        });
+
+        // Return an array containing the matching elements
+        return elements;
+    }
+
+    // Throw an error for invalid selectors
+    else {
+
+        throw new Error(`Invalid selector "${el}"`);
+
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*JS functions */
