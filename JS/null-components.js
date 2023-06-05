@@ -908,7 +908,7 @@ null_scroll_to_top();
 /* Start Sidebar */
 
 /**
- * Initializes a null tabs component.
+ * Initializes a null sidebar component.
  */
  
 const null_sidebar = () => {
