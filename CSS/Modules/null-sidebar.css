@@ -1,0 +1,57 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Sidebar */
+
+.null-sidebar-section {
+position: fixed;
+top: 0;
+width: 400px;
+height: 100%;
+z-index: 9999;
+transform: translateX(-100%);
+overflow: auto;
+-webkit-transition: transform 0.3s ease;
+-o-transition: transform 0.3s ease;
+transition: transform 0.3s ease;
+}
+
+.null-sidebar-section.active {
+transform: translateX(0) !important;
+}
+
+.null-sidebar-back-drop {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1040;
+width: 100vw;
+height: 100vh;
+background-color: #c1c1c1;
+opacity: 0.5;
+cursor: pointer;
+}
+
+.null-sidebar-body-overflow-hidden {
+overflow: hidden;
+}
+
+
+@media (max-width: 992px) {
+    .null-sidebar-section{
+    width: 300px;
+    }
+} 
+
+/* RTL */
+
+.null-rtl .null-sidebar-section{
+transform: translateX(100%);
+}
+/* RTL */
+
+/* End Sidebar */
