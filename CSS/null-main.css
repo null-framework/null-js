@@ -1206,8 +1206,6 @@ align-items: center;
 /* Start Button */ 
 
 .null-button {
-display: inline-block;
-font-weight: 400;
 color: var(--null-color-black);
 text-align: center;
 vertical-align: middle;
@@ -1413,6 +1411,11 @@ width: 18px;
 height: 18px;
 }
 
+.null-form-checkbox+label {
+flex: 1;
+word-wrap: break-word;
+}
+
 .null-form-checkbox-swither[type="checkbox"] {
 -webkit-appearance: none;
 position: relative;
@@ -1461,6 +1464,11 @@ accent-color: var(--null-color-main);
 cursor: pointer;
 width: 18px;
 height: 18px;
+}
+
+.null-form-radio-button+label {
+flex: 1;
+word-wrap: break-word;
 }
 
 .null-form-file {
