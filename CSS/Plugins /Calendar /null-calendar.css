@@ -1,0 +1,53 @@
+
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Calendar */
+
+:root {
+    --null-calendar-inactive-color:#aaa;
+    --null-calendar-active-color: var(--null-color-white);
+    --null-calendar-active-background: var(--null-color-main);
+}
+
+.null-calendar-container ul li {
+width: calc(100% / 7);
+position: relative;
+}
+
+.null-calendar-container .null-calendar-body-days-container li::before {
+position: absolute;
+content: "";
+height: 40px;
+width: 40px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+z-index: -1;
+}
+
+.null-calendar-container .null-calendar-body-weeks-container li {
+font-weight: 600;
+}
+
+.null-calendar-container .null-calendar-body-days-container li {
+margin-top: 30px;
+}
+
+.null-calendar-container .null-calendar-body-days-container li.inactive {
+color:var(--null-calendar-inactive-color);
+}
+
+.null-calendar-container .null-calendar-body-days-container li.active {
+color:var(--null-calendar-active-color);
+}
+
+.null-calendar-container .null-calendar-body-days-container li.active::before {
+background: var(--null-calendar-active-background);
+}
+
+/* End Calendar */
