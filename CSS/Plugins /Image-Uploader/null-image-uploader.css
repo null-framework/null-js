@@ -1,0 +1,43 @@
+/*
+ * Null JS v1.0.0 (https://null-js.com)
+ * Copyright (c) 2023 Null JS
+ * Licensed under MIT (https://opensource.org/licenses/MIT)
+*/
+
+/* Start Image Uploader */
+
+:root {
+--null-image-uploader-border-color: #cdcdcd;
+--null-image-uploader-height: 250px;
+}
+
+.null-image-uploader-container .null-image-uploader {
+border: 2px dashed var(--null-image-uploader-border-color);
+width: 100%;
+overflow: hidden;
+height: var(--null-image-uploader-height);
+}
+
+.null-image-uploader-container .null-image-container {
+position: absolute;
+height: 100%;
+width: 100%;
+}
+
+.null-image-uploader-container .null-image-container img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.null-image-uploader-container [data-null-image-uploader="null-custom-image-button"] {
+border: 0;
+width: 100%;
+height: 38px;
+}
+
+.null-image-uploader-container [data-null-image-uploader="null-image-check"] {
+word-wrap: break-word;
+}
+
+/* End Image Uploader */
