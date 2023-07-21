@@ -359,7 +359,7 @@ background: #d6d6d669;
 display: block;
 }
 
-.null-modal-header-container button[data-close-button] {
+.null-modal-header-container button[data-null-close-button] {
 border: none;
 outline: none;
 background: #ff9191;
