@@ -12,33 +12,27 @@
  * @param {string|number|Date} countdownDate - The countdown date. It can be a string representation of the date, a timestamp, or a Date object.
  */
 
-function null_countdown(countdownDate) {
-  let countdownTime;
+const Countdown = (() => {
+  function countdown(countdownDate, options = {}) {
+    // Validate countdownDate input
+    if (!isValidDate(countdownDate)) {
+      throw new Error('Invalid countdownDate');
+    }
 
-  // Determine the countdown time based on the input type
-  if (typeof countdownDate === 'string') {
-    countdownTime = new Date(countdownDate).getTime();
-  } else if (typeof countdownDate === 'number') {
-    countdownTime = countdownDate;
-  } else if (countdownDate instanceof Date) {
-    countdownTime = countdownDate.getTime();
-  } else {
-    throw new Error('Invalid countdownDate');
-  }
+    const { interval = 1000, onTick, onEnd } = options;
+    const countdownTime = getCountdownTime(countdownDate);
+    const countdownElements = document.querySelectorAll('[data-null-countdown]');
 
-  let counter = setInterval(() => {
-    // Get current timestamp
-    let now = Date.now();
+    if (!countdownElements.length) {
+      throw new Error('No countdown elements found');
+    }
 
-    // Calculate the difference between countdownTime and now
-    let dateDiff = countdownTime - now;
+    const counter = setInterval(() => {
+      const now = Date.now();
+      const dateDiff = countdownTime - now;
 
-    // Get elements with data-null-countdown attribute
-    let countdownElements = document.querySelectorAll('[data-null-countdown]');
-
-    if (countdownElements) {
       countdownElements.forEach((element) => {
-        let unit = element.dataset.nullCountdown.toLowerCase();
+        const unit = element.dataset.nullCountdown.toLowerCase();
         let value;
 
         switch (unit) {
@@ -58,18 +52,66 @@ function null_countdown(countdownDate) {
             throw new Error(`Invalid unit: ${unit}`);
         }
 
-        element.textContent = value < 10 ? `0${value}` : value;
+        if (onTick && typeof onTick === 'function') {
+          onTick(element, value, unit);
+        } else {
+          element.textContent = value < 10 ? `0${value}` : value;
+        }
       });
+
+      if (dateDiff < 0) {
+        clearInterval(counter);
+        countdownElements.forEach((element) => {
+          element.parentNode.remove();
+        });
+
+        if (onEnd && typeof onEnd === 'function') {
+          onEnd();
+        }
+      }
+    }, interval);
+  }
+
+  function isValidDate(date) {
+    return date instanceof Date || typeof date === 'number' || /^\d{4}-\d{2}-\d{2}$/.test(date);
+  }
+
+  function getCountdownTime(countdownDate) {
+    if (countdownDate instanceof Date) {
+      return countdownDate.getTime();
     }
 
-    // If the countdown is finished, clear the interval and remove the HTML code
-    if (dateDiff < 0) {
-      clearInterval(counter);
-      countdownElements.forEach((element) => {
-        element.parentNode.remove();
-      });
+    if (typeof countdownDate === 'number') {
+      return countdownDate;
     }
-  }, 1);
+
+    // Assume the date format is 'yyyy-mm-dd'
+    return new Date(countdownDate).getTime();
+  }
+
+  return {
+    countdown,
+  };
+})();
+
+// Example usage
+const countdownDate = new Date('2023-12-31');
+const options = {
+  interval: 1000, // Update every 1 second
+  onTick: (element, value, unit) => {
+    // Custom onTick callback to format countdown display
+    element.textContent = `${value} ${unit}`;
+  },
+  onEnd: () => {
+    // Custom onEnd callback
+    console.log('Countdown has ended!');
+  },
+};
+
+try {
+  Countdown.countdown(countdownDate, options);
+} catch (error) {
+  console.error(error.message);
 }
 
 /* End Countdown */
